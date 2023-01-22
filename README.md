@@ -30,4 +30,4 @@
 - 기술스택: Postgresql, AWS S3, Srping Webflux, ReactiveFeign, Spring Reactor, Reactor Kafka
 
 #### SoccerGroup
-- 축구모임 생성, 조회, 
+- 축구모임 생성, 조회,
