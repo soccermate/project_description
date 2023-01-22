@@ -21,13 +21,46 @@
 #### Authentication
 - 링크: https://github.com/soccermate/authentication
 - 유저의 회원가입 및 그인 비번 찾기, 구글로 회원가입 및 로그인, 토큰 재발급 기능이 지원합니다.
-- 기술 스택: Postgresql, Spring MVC, Spring Security, Oauth2 client, Spring kafka, AWS SES
+- 기술 스택: Postgresql, Spring MVC, Spring Security, Oauth2 client, Spring kafka, AWS SES, jasypt, Spring jpa
 
 #### User
 - 링크: https://github.com/soccermate/user
 - 유저의 정보(닉네임, 프로필사진, 주소)를 관리합니다.
 - Spring Webflux를 사용하여, 쓰레드를 더욱더 효율적을 사용할수 있게끔 했습니다.
-- 기술스택: Postgresql, AWS S3, Srping Webflux, ReactiveFeign, Spring Reactor, Reactor Kafka
+- 기술스택: Postgresql, AWS S3, Srping Webflux, ReactiveFeign, Spring Reactor, Reactor Kafka, jasypt, r2dbc
 
 #### SoccerGroup
-- 축구모임 생성, 조회,
+- 링크: https://github.com/soccermate/soccer_group
+- 축구모임 생성, 조회, 가입요청 등의 기능이 있습니다.
+- announcement, vote, meeting은 축구모임내에 있는 기능임에도 불구하고, 따로 나눈이유는 추후에 시간이 지나고 서비스를 운영함에따라서 축구모임내에 있는 기능들이 더 추가될것이기 때문입니다. 따라서, 확장하기 SoccerGroup 도메인과 그 안에있는 기능들을 다른 도메인으로 나누었습니다. 
+- 기술스택: Postgresql, AWS S3, Srping Webflux, ReactiveFeign, Spring Reactor, Reactor Kafka, jasypt, r2dbc
+
+#### Announcement
+- 링크: https://github.com/soccermate/announcement
+- 축구모임내의 공지 생성, 수정, 삭제 기능을 담당하는 도메인입니다.
+- 기술스택: Postgresql, AWS S3, Srping Webflux, ReactiveFeign, Spring Reactor, Reactor Kafka, jasypt, r2dbc
+
+#### Vote
+- 링크: https://github.com/soccermate/vote
+- 축구모임내의 투표 생성, 관리 기능을 담당하는 도메인입니다.
+- 기술스택: Postgresql, AWS S3, Srping Webflux, ReactiveFeign, Spring Reactor, Reactor Kafka, jasypt, r2dbc
+
+#### Meeting
+- 링크: https://github.com/soccermate/meeting
+- 축구모임내에서 언제 만날지 공지하고, 모임출석을 인증하는 도메인입니다.
+- 기술스택: Postgresql, AWS S3, Srping Webflux, ReactiveFeign, Spring Reactor, Reactor Kafka, jasypt, r2dbc
+
+#### ApiGateway
+- 링크: https://github.com/soccermate/api_gate_way
+- Proxy 서버입니다. 적절한 microservice에게 트래픽을 routing합니다.
+- 기술스택:  AWS S3, Srping Webflux, ReactiveFeign, Spring Reactor, jasypt, spring-cloud-starter-gateway
+
+#### Kubernetes
+- 링크: https://github.com/soccermate/kubernetes
+- 본 프로젝트는 AWS EKS를 사용하여, 컨테이너들을 관리하였습니다.
+- 기술스택: AWS EKS, Route53, AWS RDS, AWS S3, AWS SES
+
+### 팀원
+- 백앤드: 정상원
+- 프론트앤드: 유지은
+- 디자인: 이상미
